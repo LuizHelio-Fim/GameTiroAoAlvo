@@ -8,12 +8,15 @@ public class AlvoBranco extends Alvo{
 
 	@Override
 	public boolean acerta(int posX, int posY) {
-		if(super.igual(null)) {
+		if(super.getPosX() == posX && super.getPosY() == posY) {
 			super.setQuantADestruir(getQuantADestruir()+1);
 			return true;
-		} else {
-			return false;
 		}
+		return false;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Alvo Branco na posição (" + super.getPosX() + ", " + super.getPosY() + ")";
+	}
 }

@@ -34,15 +34,15 @@ public abstract class Alvo {
 		this.posY = posY;
 	}
 	
-	public boolean igual(Alvo alvo) {
-		if
+	public boolean igual(Alvo outro) {
+		return this.posX == outro.posX && this.posY == outro.posY;
 	}
 	
 	public abstract boolean acerta(int posX, int posY);
 
 	@Override
 	public String toString() {
-		return "Alvo\n posX= " + posX + ", posY= " + posY + "]";
+		return "Alvo na posição (" + posX + ", " + posY + ")";
 	}
 	
 	

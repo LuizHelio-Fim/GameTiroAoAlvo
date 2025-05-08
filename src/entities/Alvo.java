@@ -38,7 +38,7 @@ public abstract class Alvo {
 		if
 	}
 	
-	public abstract void acerta(int posX, int posY);
+	public abstract boolean acerta(int posX, int posY);
 
 	@Override
 	public String toString() {

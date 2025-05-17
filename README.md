@@ -4,9 +4,9 @@ Este é um jogo de tiro em Java baseado em uma matriz 5x5, onde o jogador tenta 
 
 ## 🧩 Regras do Jogo
 
-- O jogo gera automaticamente **15 alvos**:
-  - **12 Alvos Pretos** (que devem ser destruídos)
-  - **3 Alvos Brancos** (que devem ser evitados)
+- O jogo gera automaticamente **5 alvos**:
+  - **3 Alvos Pretos** (que devem ser destruídos)
+  - **2 Alvos Brancos** (que devem ser evitados)
 
 - Os alvos são posicionados aleatoriamente em uma matriz 5x5, **sem repetir posições**.
 

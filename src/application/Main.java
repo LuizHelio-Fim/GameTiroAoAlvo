@@ -24,15 +24,15 @@ public class Main {
 		Set<String> posicoesOcupadas = new HashSet<>();
 		Random rand = new Random();
 		
-		while (alvos.size() < 15) {
-			int x = rand.nextInt(5) + 1;
-			int y = rand.nextInt(5) + 1;
+		while (alvos.size() < 5) {
+			int x = rand.nextInt(4) + 1;
+			int y = rand.nextInt(4) + 1;
 			String chave = x + "," + y;
 			
 			if(!posicoesOcupadas.contains(chave)) {
 				posicoesOcupadas.add(chave);
 				
-				if (alvos.size() < 3) {
+				if (alvos.size() < 2) {
 					alvos.add(new AlvoBranco(x, y));
 				} else {
 					alvos.add(new AlvoPreto(x, y));
@@ -40,18 +40,18 @@ public class Main {
 			}
 		}
 		
-		System.out.println("Jogo iniciado com 15 alvos!");
+		System.out.println("Jogo iniciado com 5 alvos!");
 	}
 	
 	public static void atira() {
-		int tiros = 10;
+		int tiros = 12;
 		
 		while (tiros > 0 && Alvo.getQuantADestruir() > 0) {
 			System.out.println("\nVocê tem " + tiros + " tiro(s) restante(s).");
-			System.out.println("Digite a posição X (1-5): ");
+			System.out.println("Digite a posição X (1-4): ");
 			int x = sc.nextInt();
 			
-			System.out.println("Digite a posição Y (1-5): ");
+			System.out.println("Digite a posição Y (1-4): ");
 			int y = sc.nextInt();
 			
 			boolean acertou = false;
@@ -84,7 +84,7 @@ public class Main {
 		if(Alvo.getQuantADestruir() <= 0) {
 			System.out.println("\nVocê venceu!");
 		} else {
-			System.out.println("\nGame Over.");
+			System.err.println("\nGame Over.");
 		}
 	}
 
